@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body {
+    min-width: 500px;
+    overflow-x:hidden;
+}
+nav{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #F7F7F7;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px 40px 50px;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+    background: #F7F7F7;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+nav .logo {
+    color: #333;
+    height: 44px;
+    font-size: 29px;
+    font-weight: 800;
+    padding: auto;
+    cursor: pointer;
+}
+.ul {
+     display: flex;
+     list-style-type: none;
+     float: right;
+}
+.li a {
+    font-family: 'Karla' , sans-serif;
+    font-size: 17px;
+    display: block;
+    float: left;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 100;
+    color:#ffff;
+    color: #111;
+}
+li a:hover {
+    color:#F0F;
+    transition: 0.4s ease-in-out;
+}
+.container {
+    margin: auto;
+    width:100%;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.chunk {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2px;
+    margin-left: 2px;
+    margin-top: 7px;
+    width:33.33% ;
+}
+.overlay {
+    position: absolute;
+    top: -1.4px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-family: 'Karla' ,sans-serif;
+    font-size: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ;
+    margin-top: -2px;
+}
+.overlay > * {
+    
+    transform: translate3d(0, 69px ,0);
+    transition: transform 0.25s;
+
+}
+.overlay:hover {
+    opacity: 0.6;
+    backdrop-filter: blur(30px);
+}
+
+.overlay:hover > * {
+    transform: translateY(0);
+    transition: transform 0.25s;
+}
+.image {
+    margin-right: -2px;
+    margin-left: -2px;
+    margin-top: -4px;
+    margin-bottom: -4.5px;
+    display: inline-block;
+    width: 100%;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 45px 4.2105%;
+    border: 1px solid #888;
+    float: right;
+    min-height: 100%;
+    width: 57%;
+    border-radius: 15px 0 0 15px;
+  }
+.close {
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.65);
+    float: right;
+    margin: auto 0;
+    cursor:pointer;
+}
+.close:hover , .close:focus {
+    color: rgba(0, 0, 0, 1.0);
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content_title {
+    color: #111;
+    font-family: 'Karla' ,sans-serif;
+    font-size: 26px;
+    line-height: 1.15;
+    margin: auto 0 ;
+}
+.content_description {
+    display: flex;
+    margin-top: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Karla' ,sans-serif;
+    padding:15px;
+}
+.content_leftside {
+    width: 60%;
+    
+}
+.content_rightside {
+    width: 40%;
+    margin-left: 0;
+    font-family: 'Karla' ,sans-serif;
+    text-align: end;
+    color: #909090;
+}
+.content_rightside span {
+    margin-bottom: 5rem;
+    padding-bottom: 40px;
+    align-items: right;
+
+}
+.portfolio_images {
+    
+}
+.images {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media(max-width:850px) {
+    navbar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    nav .logo{
+        width: 50%;
+        margin:auto;
+        text-align: center;
+    }
+    nav ul{
+        margin: auto;
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    body {
+        background-color: red;
+    }
+}
+@media(max-width:1190px) {
+    .first {
+        width: 49.81%;
+    }
+}

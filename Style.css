@@ -6,6 +6,37 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
+
+/*Creating the loader*/
+.loader {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+.circle {
+    animation: grow 1.5s linear infinite;
+	background-color: purple;
+	border-radius: 50%;
+	display: inline-block;
+	margin: -10px;
+	height: 40px;
+	width: 40px;
+	transform: scale(0);
+}
+.circle:nth-child(2) {
+    animation-delay: .75s;
+	background-color: palevioletred;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
 body {
     min-width: 500px;
     overflow-x:hidden;
@@ -68,7 +99,7 @@ li a:hover {
     justify-content: center;
     margin-right: -2px;
     margin-left: 2px;
-    margin-top: 7px;
+    margin-top: 2.4px;
     width:33.33% ;
 }
 .overlay {
@@ -88,17 +119,27 @@ li a:hover {
     opacity: 0;
     transition: opacity 0.25s ;
     margin-top: -2px;
+
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
 }
-.overlay > * {
+/* .overlay > * {
     
     transform: translate3d(0, 69px ,0);
     transition: transform 0.25s;
 
+} */
+.chunk:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.99;
+    backdrop-filter:blur(04.69px);
 }
-.overlay:hover {
-    opacity: 0.6;
-    backdrop-filter: blur(30px);
-}
+
 
 .overlay:hover > * {
     transform: translateY(0);
@@ -123,6 +164,7 @@ li a:hover {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
   
   /* Modal Content */
@@ -134,6 +176,9 @@ li a:hover {
     min-height: 100%;
     width: 57%;
     border-radius: 15px 0 0 15px;
+    animation: slide-in .5s ease;
+    animation-fill-mode:forwards;
+    
   }
 .close {
     font-size: 48px;
@@ -194,7 +239,14 @@ li a:hover {
 body.modal-open {
     overflow: hidden;
 }
-
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 @media(max-width:850px) {
     navbar {
         display: flex;

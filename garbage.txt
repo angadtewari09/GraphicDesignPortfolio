@@ -1,0 +1,62 @@
+ //function addItem() {
+//     var chunk = document.createElement('div');
+//     chunk.classList.add('chunk');
+//     chunk.setAttribute("id" , "myBtn" )
+
+//     var img = document.createElement('img');
+//     img.src="600x600-2_p1g3e4vs7t8lq1uag1q1l1sc61dd03.jpg"
+//     img.classList.add('image');
+    
+//     // var overlay = document.createElement('div');
+//     // overlay.classList.add('overlay')
+
+//     // // var content = document.createElement('div');
+//     // // content.classList.add('content');
+//     // // content.innerHTML = `Friday Brands`;
+
+//     // // overlay.appendChild(content);
+    
+//     document.getElementById('main-body').appendChild(chunk);
+//     chunk.appendChild(img);
+//     // chunk.appendChild(overlay);
+    
+//     var model = document.createElement('div');
+//     model.classList.add('modal')
+//     model.setAttribute("id" , "myModal");
+
+//     var model_content = document.createElement('div')
+//     model_content.classList.add('modal_content');
+
+//     var top = document.createElement('div')
+//     top.classList.add('top');
+
+//     var p = document.createElement('p')
+//     p.classList.add("content_title")
+//     p.innerHTML = `Title of the project!`
+//     console.log(p.innerHTML)
+
+//     var span = document.createElement('span');
+//     span.classList.add('close');
+//     span.innerHTML = `&times;`
+//     console.log(span.innerHTML)
+
+//     model_content.appendChild(top);
+//     top.appendChild(p)
+//     top.appendChild(span)
+
+
+
+//     // const attr_src = ["Cyberpunk-4K-Wallpaper.jpg" ,"space_planet_surface_shadow_46631_3840x2160.jpg" , "4k-desktop-wallpaper.-2560×1440.jpg" ]
+//     // var portfolio_images = document.createElement('div')
+//     // portfolio_images.classList.add('portfolio_images')
+//     // model_content.appendChild(portfolio_images);
+//     // for( let i=0; i< attr_src.length; i++) {
+//     //     var inner_image = document.createElement('img')
+//     //     inner_image.classList.add('images')
+//     //     inner_image.src = `${i}`;
+//     //     portfolio_images.appendChild(inner_image);
+//     // }
+
+    
+// document.getElementById('main-body').appendChild(model);
+// }
